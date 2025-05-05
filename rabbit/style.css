@@ -1,0 +1,77 @@
+body {
+    background-color: #fff0f5;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Lớp nền chữ yêu Thỏ */
+  body::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(255, 182, 193, 0.15) 0,
+      rgba(255, 182, 193, 0.15) 2px,
+      transparent 2px,
+      transparent 80px
+    );
+    z-index: 0;
+  }
+  
+  /* Thêm chữ yêu Thỏ phủ nền */
+  body::after {
+    content: attr(data-bgtext);
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    font-size: 40px;
+    color: rgba(255, 105, 180, 0.08);
+    transform: rotate(-30deg);
+    z-index: 0;
+    white-space: pre-wrap;
+    line-height: 60px;
+    pointer-events: none;
+  }
+  
+  /* Đặt nội dung chính nổi lên trên */
+  .container {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  h1 {
+    font-weight: bold;
+    color: #d63384;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    width: 150px;
+  }
+  
+  #loveResponse {
+    margin-top: 30px;
+  }
+  
